@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class BookList extends Component {
     render() {
@@ -8,8 +8,8 @@ class BookList extends Component {
                     <li>Book name</li>
                 </ul>
             </div>
-        );
+        )
     }
 }
 
-export default BookList;
+export default BookList
