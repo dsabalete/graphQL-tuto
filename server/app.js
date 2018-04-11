@@ -2,11 +2,15 @@ const express = require('express')
 const graphqlHTTP = require('express-graphql')
 const schema = require('./schema/schema')
 const mongoose = require('mongoose')
+const dotenv = require('dotenv')
+
+dotenv.load()
 
 const app = express()
 
-// connect to mlab database
-mongoose.connect('mongodb://jander:test123@ds231559.mlab.com:31559/gql-jander')
+// connect to your mlab database
+// use proper USER and PASS in a .env file
+mongoose.connect(`mongodb://${process.env.USER}:${process.env.PASS}.mlab.com:31559/gql-jander`)
 mongoose.connection.once('open', () => {
     console.log('connected to database')
 })
