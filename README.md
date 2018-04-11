@@ -23,5 +23,11 @@ From de _server_ folder execute
 nodemon app
 ```
 
+To start react client:
+```
+cd client
+npm start
+```
+
 ## GraphiQL
 Client GraphiQL is running at http://localhost:4000/graphql
